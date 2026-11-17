@@ -1,0 +1,329 @@
+{
+  "dataset": "behavior_conditions_v1",
+  "version": 1,
+  "created": "2026-11-17",
+  "prompt_template": "检索证据：{evidence}\n问题：{question}",
+  "design_notes": [
+    "全部人物、机构、产品、赛事均为虚构，问题无法依靠预训练知识回答。",
+    "同一问题的三种条件使用完全相同的问题文本与 Prompt 模板，仅证据句不同。",
+    "金标答案（gold_answer）只出现在 sufficient 证据中，绝不出现在 insufficient 与 none 证据中。",
+    "insufficient 证据提及同一实体但给出相邻属性的干扰信息（如博士后院校而非博士院校、第二届而非第一届）。",
+    "none 证据为完全无关的虚构检索噪声（模拟检索器失效返回不相关文本），共 10 段轮换使用。",
+    "candidates 是该问题答案槽位可能出现的具体实体（金标+干扰项），用于自动分类；数字候选用数字边界匹配，避免 2016 误含 16 等。",
+    "自动分类只是初筛，所有回答保留全文供人工复核；『猜对答案』绝不计入有证据支持。"
+  ],
+  "irrelevant_pool": [
+    "临溪镇的青石板路已有两百年历史，镇口的老茶馆每天清晨五点开门，招牌点心是桂花糖藕。",
+    "《雾中灯塔》是一部关于守塔人家庭的纪录片，摄制组在孤岛上驻扎了四个月，拍摄了超过两百小时的素材。",
+    "蓝翅绣眼鸟每年秋季向南迁徙，途经沿海湿地时会成群停歇，观鸟爱好者常在十月末记录到它们。",
+    "云来市地铁三号线今天起调整末班车时间，双向末班车均延后二十分钟，方便夜间换乘高铁的旅客。",
+    "老周面馆的牛肉面坚持手工抻面，汤底用牛骨熬制六小时，周末中午常常要排队半小时。",
+    "《拾贝者》诗集收录了诗人晚年在海边的六十余首短诗，其中《退潮之后》被认为是转折之作。",
+    "南山滑雪场本雪季新增两条初级道，并开设儿童滑雪学校，教练均持有省级资格证书。",
+    "槐荫社区的口袋公园上月完工，新增了环形步道和雨水花园，傍晚有不少居民来散步。",
+    "静水湖湿地公园本周观测到八只小天鹅，工作人员提醒游客保持距离，不要投喂食物。",
+    "《灯下裁缝》话剧下月巡演至本省，讲述一位老裁缝与缝纫机的故事，全长一百一十分钟。"
+  ],
+  "questions": [
+    {
+      "id": "Q01", "type": "phd_school", "type_zh": "博士毕业院校",
+      "question": "林昭远在哪所大学获得博士学位？",
+      "gold_answer": "澜山大学", "candidates": ["澜山大学", "云海理工大学"],
+      "evidences": {
+        "sufficient": "林昭远于2019年在澜山大学获得计算机科学博士学位，博士课题是分布式任务调度。",
+        "insufficient": "林昭远硕士毕业于云海理工大学，此后留在云海理工大学高频计算实验室从事博士后研究。",
+        "none": 0
+      }
+    },
+    {
+      "id": "Q02", "type": "phd_school", "type_zh": "博士毕业院校",
+      "question": "沈砚秋在哪所大学获得博士学位？",
+      "gold_answer": "栖霞交通大学", "candidates": ["栖霞交通大学", "白鹭洲大学"],
+      "evidences": {
+        "sufficient": "沈砚秋2018年取得栖霞交通大学交通运输工程博士学位，论文研究铁路信号优化。",
+        "insufficient": "沈砚秋目前任教于白鹭洲大学自动化系，主讲控制原理课程。",
+        "none": 1
+      }
+    },
+    {
+      "id": "Q03", "type": "phd_school", "type_zh": "博士毕业院校",
+      "question": "顾之澜在哪所大学获得博士学位？",
+      "gold_answer": "覃川师范大学", "candidates": ["覃川师范大学", "南屏理工学院"],
+      "evidences": {
+        "sufficient": "顾之澜在覃川师范大学获得教育学博士学位，研究方向为乡村教师培养。",
+        "insufficient": "顾之澜曾在南屏理工学院担任客座讲师，讲授教育心理学。",
+        "none": 2
+      }
+    },
+    {
+      "id": "Q04", "type": "phd_school", "type_zh": "博士毕业院校",
+      "question": "陈慕青在哪所大学获得博士学位？",
+      "gold_answer": "星洲大学", "candidates": ["星洲大学", "岚屿大学"],
+      "evidences": {
+        "sufficient": "陈慕青2021年毕业于星洲大学材料科学系，获工学博士学位。",
+        "insufficient": "陈慕青本科就读于岚屿大学化学系，毕业后进入企业从事研发工作。",
+        "none": 3
+      }
+    },
+    {
+      "id": "Q05", "type": "phd_school", "type_zh": "博士毕业院校",
+      "question": "韩沛霖在哪所大学获得博士学位？",
+      "gold_answer": "青梧大学", "candidates": ["青梧大学", "雾隐大学"],
+      "evidences": {
+        "sufficient": "韩沛霖在青梧大学取得理论物理博士学位，毕业后进入中学任教。",
+        "insufficient": "韩沛霖早年在雾隐大学担任研究助理，参与凝聚态实验组的工作。",
+        "none": 4
+      }
+    },
+    {
+      "id": "Q06", "type": "phd_advisor", "type_zh": "博士导师",
+      "question": "宋知微的博士生导师是谁？",
+      "gold_answer": "温景行", "candidates": ["温景行", "岑若曦"],
+      "evidences": {
+        "sufficient": "宋知微在攻读博士期间师从温景行教授，研究方向为气候变化经济学。",
+        "insufficient": "宋知微与岑若曦是同门师姐妹，两人同在应用经济学专业就读。",
+        "none": 5
+      }
+    },
+    {
+      "id": "Q07", "type": "phd_advisor", "type_zh": "博士导师",
+      "question": "池晚舟的博士生导师是谁？",
+      "gold_answer": "霍铭轩", "candidates": ["霍铭轩", "端木青"],
+      "evidences": {
+        "sufficient": "池晚舟的博士导师是霍铭轩教授，论文题目涉及方言语音识别。",
+        "insufficient": "池晚舟的师兄端木青常在组会上分享语料库建设经验。",
+        "none": 6
+      }
+    },
+    {
+      "id": "Q08", "type": "phd_advisor", "type_zh": "博士导师",
+      "question": "黎昀舒的博士生导师是谁？",
+      "gold_answer": "桑无咎", "candidates": ["桑无咎", "祝云鹤"],
+      "evidences": {
+        "sufficient": "黎昀舒师从桑无咎教授完成博士学业，专注湿地生态修复研究。",
+        "insufficient": "黎昀舒的师姐祝云鹤毕业后去了研究所工作。",
+        "none": 7
+      }
+    },
+    {
+      "id": "Q09", "type": "phd_advisor", "type_zh": "博士导师",
+      "question": "聂怀远的博士生导师是谁？",
+      "gold_answer": "闻人语", "candidates": ["闻人语", "柳一苇"],
+      "evidences": {
+        "sufficient": "聂怀远的博士生导师为闻人语教授，主攻先秦文献整理。",
+        "insufficient": "聂怀远的同门柳一苇正在准备博士开题报告。",
+        "none": 8
+      }
+    },
+    {
+      "id": "Q10", "type": "phd_advisor", "type_zh": "博士导师",
+      "question": "阮清越的博士生导师是谁？",
+      "gold_answer": "楚天阔", "candidates": ["楚天阔", "齐修远"],
+      "evidences": {
+        "sufficient": "阮清越在楚天阔教授指导下获得博士学位，研究胶体自组装。",
+        "insufficient": "阮清越的师弟齐修远刚通过博士中期考核。",
+        "none": 9
+      }
+    },
+    {
+      "id": "Q11", "type": "founding_year", "type_zh": "成立年份",
+      "question": "岚屿科技成立于哪一年？",
+      "gold_answer": "2016", "candidates": ["2016", "2020", "2022"],
+      "evidences": {
+        "sufficient": "岚屿科技成立于2016年，创始团队来自高校实验室。",
+        "insufficient": "岚屿科技在2020年迁入滨海软件园，2022年员工总数突破八百人。",
+        "none": 0
+      }
+    },
+    {
+      "id": "Q12", "type": "founding_year", "type_zh": "成立年份",
+      "question": "雾隐制药成立于哪一年？",
+      "gold_answer": "2009", "candidates": ["2009", "2015"],
+      "evidences": {
+        "sufficient": "雾隐制药2009年注册成立，主营缓释制剂。",
+        "insufficient": "雾隐制药的中央实验楼于2015年投入使用。",
+        "none": 1
+      }
+    },
+    {
+      "id": "Q13", "type": "founding_year", "type_zh": "成立年份",
+      "question": "沧浪机器人成立于哪一年？",
+      "gold_answer": "2021", "candidates": ["2021", "2023"],
+      "evidences": {
+        "sufficient": "沧浪机器人于2021年正式成立，专注协作机械臂。",
+        "insufficient": "沧浪机器人在2023年发布了第二代视觉系统。",
+        "none": 2
+      }
+    },
+    {
+      "id": "Q14", "type": "founding_year", "type_zh": "成立年份",
+      "question": "萤火智能硬件成立于哪一年？",
+      "gold_answer": "2013", "candidates": ["2013", "2017"],
+      "evidences": {
+        "sufficient": "萤火智能硬件创立于2013年，最早生产充电配件。",
+        "insufficient": "萤火智能硬件的海外事业部设立于2017年。",
+        "none": 3
+      }
+    },
+    {
+      "id": "Q15", "type": "founding_year", "type_zh": "成立年份",
+      "question": "远岫新能源成立于哪一年？",
+      "gold_answer": "2018", "candidates": ["2018", "2024"],
+      "evidences": {
+        "sufficient": "远岫新能源成立于2018年，主营屋顶光伏。",
+        "insufficient": "远岫新能源2024年的组件产能比上一年翻了一番。",
+        "none": 4
+      }
+    },
+    {
+      "id": "Q16", "type": "hq_city", "type_zh": "总部城市",
+      "question": "拾光文化传媒的总部位于哪座城市？",
+      "gold_answer": "杭州", "candidates": ["杭州", "南京"],
+      "evidences": {
+        "sufficient": "拾光文化传媒总部位于杭州，毗邻创意产业园区。",
+        "insufficient": "拾光文化传媒在南京设有分公司，负责华东发行业务。",
+        "none": 5
+      }
+    },
+    {
+      "id": "Q17", "type": "hq_city", "type_zh": "总部城市",
+      "question": "磐石航空材料的总部位于哪座城市？",
+      "gold_answer": "西安", "candidates": ["西安", "武汉"],
+      "evidences": {
+        "sufficient": "磐石航空材料总部设在西安。",
+        "insufficient": "磐石航空材料的热处理车间位于武汉基地。",
+        "none": 6
+      }
+    },
+    {
+      "id": "Q18", "type": "hq_city", "type_zh": "总部城市",
+      "question": "青梧教育集团的总部位于哪座城市？",
+      "gold_answer": "成都", "candidates": ["成都", "北京"],
+      "evidences": {
+        "sufficient": "青梧教育集团总部位于成都。",
+        "insufficient": "青梧教育集团旗下子公司注册在北京。",
+        "none": 7
+      }
+    },
+    {
+      "id": "Q19", "type": "hq_city", "type_zh": "总部城市",
+      "question": "疏影游戏工作室的总部位于哪座城市？",
+      "gold_answer": "厦门", "candidates": ["厦门", "广州"],
+      "evidences": {
+        "sufficient": "疏影游戏工作室将总部设在厦门。",
+        "insufficient": "疏影游戏工作室在广州设有发行办事处。",
+        "none": 8
+      }
+    },
+    {
+      "id": "Q20", "type": "hq_city", "type_zh": "总部城市",
+      "question": "灵汐生物的总部位于哪座城市？",
+      "gold_answer": "苏州", "candidates": ["苏州", "合肥"],
+      "evidences": {
+        "sufficient": "灵汐生物的总部在苏州工业园区。",
+        "insufficient": "灵汐生物的中试生产基地设在合肥。",
+        "none": 9
+      }
+    },
+    {
+      "id": "Q21", "type": "core_product", "type_zh": "核心产品",
+      "question": "白鹭洲数据的核心产品是什么？",
+      "gold_answer": "苍穹查询引擎", "candidates": ["苍穹查询引擎", "轻语备份工具"],
+      "evidences": {
+        "sufficient": "白鹭洲数据的核心产品是苍穹查询引擎，服务实时分析场景。",
+        "insufficient": "白鹭洲数据去年上线了轻语备份工具，面向个人用户。",
+        "none": 0
+      }
+    },
+    {
+      "id": "Q22", "type": "core_product", "type_zh": "核心产品",
+      "question": "星桥研究院的代表性观测设备是什么？",
+      "gold_answer": "星桥一号望远镜阵列", "candidates": ["星桥一号望远镜阵列", "南屏射电阵"],
+      "evidences": {
+        "sufficient": "星桥研究院的代表性设备是星桥一号望远镜阵列，部署在高原站址。",
+        "insufficient": "星桥研究院与多家机构共建了南屏射电阵联合观测网络。",
+        "none": 1
+      }
+    },
+    {
+      "id": "Q23", "type": "core_product", "type_zh": "核心产品",
+      "question": "雾山微电子的核心芯片产品是什么？",
+      "gold_answer": "雾松M3", "candidates": ["雾松M3", "雨燕传感器"],
+      "evidences": {
+        "sufficient": "雾山微电子的核心产品为雾松M3处理器，面向边缘计算。",
+        "insufficient": "雾山微电子的雨燕传感器主要供货给汽车厂商。",
+        "none": 2
+      }
+    },
+    {
+      "id": "Q24", "type": "core_product", "type_zh": "核心产品",
+      "question": "云隐轨道装备的主型产品是什么？",
+      "gold_answer": "云隐S1磁浮列车", "candidates": ["云隐S1磁浮列车", "临江制动系统"],
+      "evidences": {
+        "sufficient": "云隐轨道装备的主型产品是云隐S1磁浮列车，已完成线路测试。",
+        "insufficient": "云隐轨道装备采购的临江制动系统近日通过验收。",
+        "none": 3
+      }
+    },
+    {
+      "id": "Q25", "type": "core_product", "type_zh": "核心产品",
+      "question": "芳汀香氛的招牌产品是什么？",
+      "gold_answer": "夜航香水", "candidates": ["夜航香水", "晨露蜡烛"],
+      "evidences": {
+        "sufficient": "芳汀香氛的招牌产品是夜航香水，以雪松与海盐调著称。",
+        "insufficient": "芳汀香氛早年推出的晨露蜡烛如今已经停产。",
+        "none": 4
+      }
+    },
+    {
+      "id": "Q26", "type": "quantity", "type_zh": "数量",
+      "question": "第一届山海杯机器人对抗赛共有多少支队伍参赛？",
+      "gold_answer": "32", "candidates": ["32", "48"],
+      "evidences": {
+        "sufficient": "第一届山海杯机器人对抗赛共有32支队伍参赛，覆盖十四所高校。",
+        "insufficient": "第二届山海杯机器人对抗赛的参赛队伍增加到48支。",
+        "none": 5
+      }
+    },
+    {
+      "id": "Q27", "type": "quantity", "type_zh": "数量",
+      "question": "雾隐制药2024年公众开放日接待了多少名参观者？",
+      "gold_answer": "2600", "candidates": ["2600", "1800"],
+      "evidences": {
+        "sufficient": "雾隐制药2024年公众开放日共接待2600名参观者。",
+        "insufficient": "雾隐制药2023年开放日接待了1800名参观者。",
+        "none": 6
+      }
+    },
+    {
+      "id": "Q28", "type": "quantity", "type_zh": "数量",
+      "question": "拾光文化传媒2024年举办了多少场线下观影会？",
+      "gold_answer": "36", "candidates": ["36", "52"],
+      "evidences": {
+        "sufficient": "拾光文化传媒2024年共举办36场线下观影会。",
+        "insufficient": "拾光文化传媒2023年举办了52场线下观影会。",
+        "none": 7
+      }
+    },
+    {
+      "id": "Q29", "type": "quantity", "type_zh": "数量",
+      "question": "临江智造产业园一期有多少家企业入驻？",
+      "gold_answer": "47", "candidates": ["47", "63"],
+      "evidences": {
+        "sufficient": "临江智造产业园一期共入驻47家企业。",
+        "insufficient": "临江智造产业园二期已签约63家企业。",
+        "none": 8
+      }
+    },
+    {
+      "id": "Q30", "type": "quantity", "type_zh": "数量",
+      "question": "疏影游戏工作室2025年年会设置了多少个一等奖名额？",
+      "gold_answer": "8", "candidates": ["8", "60"],
+      "evidences": {
+        "sufficient": "疏影游戏工作室2025年年会共设8个一等奖名额。",
+        "insufficient": "疏影游戏工作室2025年年会的三等奖名额多达60个。",
+        "none": 9
+      }
+    }
+  ]
+}

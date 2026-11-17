@@ -1,0 +1,638 @@
+[
+  {
+    "batch": 1,
+    "groups": [
+      {
+        "distractor_first": "{p}在{i}从事博士后研究",
+        "distractor_second": "在{i}从事博士后研究",
+        "distractor_relation": "从事博士后研究",
+        "domain": "大学",
+        "group_id": "G01",
+        "institution_1": "澜庭大学",
+        "institution_2": "朔野大学",
+        "main_first": "{p}在{i}获得博士学位",
+        "main_relation": "获得博士学位",
+        "main_second": "在{i}获得博士学位",
+        "person": "沈既明",
+        "question": "沈既明在哪所大学获得博士学位？"
+      },
+      {
+        "distractor_first": "{p}在{i}担任兼职讲师",
+        "distractor_second": "在{i}担任兼职讲师",
+        "distractor_relation": "担任兼职讲师",
+        "domain": "大学",
+        "group_id": "G02",
+        "institution_1": "昭衡大学",
+        "institution_2": "屿声大学",
+        "main_first": "{p}在{i}攻读硕士学位",
+        "main_relation": "攻读硕士学位",
+        "main_second": "在{i}攻读硕士学位",
+        "person": "顾昭桐",
+        "question": "顾昭桐在哪所大学攻读硕士学位？"
+      },
+      {
+        "distractor_first": "{p}在{i}进行访问研究",
+        "distractor_second": "在{i}进行访问研究",
+        "distractor_relation": "进行访问研究",
+        "domain": "大学",
+        "group_id": "G03",
+        "institution_1": "岑川大学",
+        "institution_2": "沐棠大学",
+        "main_first": "{p}在{i}完成本科学业",
+        "main_relation": "完成本科学业",
+        "main_second": "在{i}完成本科学业",
+        "person": "陆望澜",
+        "question": "陆望澜在哪所大学完成本科学业？"
+      },
+      {
+        "distractor_first": "{p}在{i}短期讲学",
+        "distractor_second": "在{i}短期讲学",
+        "distractor_relation": "短期讲学",
+        "domain": "大学",
+        "group_id": "G04",
+        "institution_1": "汀兰大学",
+        "institution_2": "栖迟大学",
+        "main_first": "{p}在{i}长期任教",
+        "main_relation": "长期任教",
+        "main_second": "在{i}长期任教",
+        "person": "温叙白",
+        "question": "温叙白在哪所大学长期任教？"
+      },
+      {
+        "distractor_first": "{p}在{i}受聘客座教授",
+        "distractor_second": "在{i}受聘客座教授",
+        "distractor_relation": "受聘客座教授",
+        "domain": "大学",
+        "group_id": "G05",
+        "institution_1": "竹屿大学",
+        "institution_2": "雪泾大学",
+        "main_first": "{p}在{i}出任法学院院长",
+        "main_relation": "出任法学院院长",
+        "main_second": "在{i}出任法学院院长",
+        "person": "池砚秋",
+        "question": "池砚秋在哪所大学出任法学院院长？"
+      }
+    ],
+    "verdicts": {
+      "G01": {
+        "group_id": "G01",
+        "pass": true,
+        "issues": []
+      },
+      "G02": {
+        "group_id": "G02",
+        "pass": true,
+        "issues": []
+      },
+      "G03": {
+        "group_id": "G03",
+        "pass": true,
+        "issues": []
+      },
+      "G04": {
+        "group_id": "G04",
+        "pass": true,
+        "issues": []
+      },
+      "G05": {
+        "group_id": "G05",
+        "pass": true,
+        "issues": []
+      }
+    },
+    "repaired": false,
+    "failed_initial": []
+  },
+  {
+    "batch": 2,
+    "groups": [
+      {
+        "distractor_first": "{p}长期在{i}开展合作研究",
+        "distractor_relation": "开展合作研究",
+        "distractor_second": "长期在{i}开展合作研究",
+        "domain": "大学",
+        "group_id": "G06",
+        "institution_1": "泠然大学",
+        "institution_2": "淮声大学",
+        "main_first": "{p}曾在{i}获授名誉博士学位",
+        "main_relation": "获授名誉博士学位",
+        "main_second": "曾在{i}获授名誉博士学位",
+        "person": "郁疏桐",
+        "question": "郁疏桐在哪所大学获授名誉博士学位？"
+      },
+      {
+        "distractor_first": "{p}在{i}担任产业顾问",
+        "distractor_relation": "担任产业顾问",
+        "distractor_second": "在{i}担任产业顾问",
+        "domain": "大学",
+        "group_id": "G07",
+        "institution_1": "鹤汀大学",
+        "institution_2": "叙川大学",
+        "main_first": "{p}在{i}设立冠名奖学金",
+        "main_relation": "设立冠名奖学金",
+        "main_second": "在{i}设立冠名奖学金",
+        "person": "黎觉非",
+        "question": "黎觉非在哪所大学设立冠名奖学金？"
+      },
+      {
+        "distractor_first": "{p}于{i}讲授暑期课程",
+        "distractor_relation": "讲授暑期课程",
+        "distractor_second": "于{i}讲授暑期课程",
+        "domain": "大学",
+        "group_id": "G08",
+        "institution_1": "拾翠大学",
+        "institution_2": "遂初大学",
+        "main_first": "{p}于{i}主持联合实验室",
+        "main_relation": "主持联合实验室",
+        "main_second": "于{i}主持联合实验室",
+        "person": "桑无咎",
+        "question": "桑无咎在哪所大学主持联合实验室？"
+      },
+      {
+        "distractor_first": "{p}长期在{i}参与校史研究",
+        "distractor_relation": "参与校史研究",
+        "distractor_second": "长期在{i}参与校史研究",
+        "domain": "大学",
+        "group_id": "G09",
+        "institution_1": "岫云大学",
+        "institution_2": "兰皋大学",
+        "main_first": "{p}在{i}担任图书馆特藏部主任",
+        "main_relation": "担任图书馆特藏部主任",
+        "main_second": "在{i}担任图书馆特藏部主任",
+        "person": "应雪岑",
+        "question": "应雪岑在哪所大学担任图书馆特藏部主任？"
+      },
+      {
+        "distractor_first": "{p}在{i}指导田径队训练",
+        "distractor_relation": "指导田径队训练",
+        "distractor_second": "在{i}指导田径队训练",
+        "domain": "大学",
+        "group_id": "G10",
+        "institution_1": "采菱大学",
+        "institution_2": "鹿溪大学",
+        "main_first": "{p}在{i}攻读第二学位",
+        "main_relation": "攻读第二学位",
+        "main_second": "在{i}攻读第二学位",
+        "person": "阮青崖",
+        "question": "阮青崖在哪所大学攻读第二学位？"
+      }
+    ],
+    "verdicts": {
+      "G06": {
+        "group_id": "G06",
+        "pass": true,
+        "issues": []
+      },
+      "G07": {
+        "group_id": "G07",
+        "pass": true,
+        "issues": []
+      },
+      "G08": {
+        "group_id": "G08",
+        "pass": true,
+        "issues": [
+          "非阻断提示（不判 fail，不违反任何硬性规则）：「联合实验室」一词本身暗示存在另一家未点名的共建机构，理论上可能诱发对『联合』对象的额外猜测；但证据小句中合作伙伴从未被指明，干扰小句为『讲授暑期课程』（明确不同的行为），两种拼接顺序下问句『在哪所大学主持联合实验室』均只有唯一文本答案（拾翠大学/遂初大学），故保留 pass。"
+        ]
+      },
+      "G09": {
+        "group_id": "G09",
+        "pass": true,
+        "issues": []
+      },
+      "G10": {
+        "group_id": "G10",
+        "pass": true,
+        "issues": []
+      }
+    },
+    "repaired": false,
+    "failed_initial": []
+  },
+  {
+    "batch": 3,
+    "groups": [
+      {
+        "distractor_first": "{p}在{i}开设通识讲座",
+        "distractor_relation": "开设通识讲座",
+        "distractor_second": "在{i}开设通识讲座",
+        "domain": "大学",
+        "group_id": "G11",
+        "institution_1": "灼华大学",
+        "institution_2": "悠然大学",
+        "main_first": "{p}在{i}担任辩论队主教练",
+        "main_relation": "担任辩论队主教练",
+        "main_second": "在{i}担任辩论队主教练",
+        "person": "骆云笙",
+        "question": "骆云笙在哪所大学担任辩论队主教练？"
+      },
+      {
+        "distractor_first": "{p}受邀在{i}毕业典礼演讲",
+        "distractor_relation": "受邀毕业典礼演讲",
+        "distractor_second": "受邀在{i}毕业典礼演讲",
+        "domain": "大学",
+        "group_id": "G12",
+        "institution_1": "澍雨大学",
+        "institution_2": "曲澜大学",
+        "main_first": "{p}被{i}评为杰出校友",
+        "main_relation": "获评杰出校友",
+        "main_second": "被{i}评为杰出校友",
+        "person": "闵鹤知",
+        "question": "闵鹤知被哪所大学评为杰出校友？"
+      },
+      {
+        "distractor_first": "{p}担任外部顾问的公司是{i}",
+        "distractor_relation": "担任外部顾问",
+        "distractor_second": "担任外部顾问的公司是{i}",
+        "domain": "公司",
+        "group_id": "G13",
+        "institution_1": "云枢科技",
+        "institution_2": "星阑信息",
+        "main_first": "{p}所创立的公司是{i}",
+        "main_relation": "创立公司",
+        "main_second": "其创立的公司是{i}",
+        "person": "祝长野",
+        "question": "祝长野创立了哪家公司？"
+      },
+      {
+        "distractor_first": "{p}在{i}担任首席科学家",
+        "distractor_relation": "担任首席科学家",
+        "distractor_second": "在{i}担任首席科学家",
+        "domain": "公司",
+        "group_id": "G14",
+        "institution_1": "曜石控股",
+        "institution_2": "燧石智能",
+        "main_first": "{p}在{i}出任首任首席执行官",
+        "main_relation": "出任首任首席执行官",
+        "main_second": "在{i}出任首任首席执行官",
+        "person": "屠文茵",
+        "question": "屠文茵在哪家公司出任首任首席执行官？"
+      },
+      {
+        "distractor_first": "{p}在{i}参与早期内测",
+        "distractor_relation": "参与早期内测",
+        "distractor_second": "在{i}参与早期内测",
+        "domain": "公司",
+        "group_id": "G15",
+        "institution_1": "银汐科技",
+        "institution_2": "苇航科技",
+        "main_first": "{p}在{i}主持发布旗舰产品",
+        "main_relation": "主持发布旗舰产品",
+        "main_second": "在{i}主持发布旗舰产品",
+        "person": "符听澜",
+        "question": "符听澜在哪家公司主持发布旗舰产品？"
+      }
+    ],
+    "verdicts": {
+      "G11": {
+        "group_id": "G11",
+        "pass": true,
+        "issues": []
+      },
+      "G12": {
+        "group_id": "G12",
+        "pass": true,
+        "issues": []
+      },
+      "G13": {
+        "group_id": "G13",
+        "pass": false,
+        "issues": [
+          "违反规则5（组内四个小句结构不平行）：main 模板为「{p}所创立的公司是{i}」，是判断句结构，机构位于小句末尾（宾语位置）；distractor 模板为「{p}在{i}担任外部顾问」，是状语结构，机构位于小句中部。渲染后如「祝长野所创立的公司是云枢科技；在星阑信息担任外部顾问。」正确答案机构与干扰机构在小句内的句法位置不一致，该结构差异与『正确/干扰』标签完全共变，构成位置偏差实验的潜在混淆（小句内位置差异可能独立影响模型对答案的注意与提取）。其余四组均为统一的『（{p}）在/被{i}＋谓语』结构，仅本组例外。",
+          "次要提示（规则7边缘，未单独定罪）：main_second「所创立的公司是{i}」依赖承前省略主语，书面语可接受但略显文语化，改为「其创立的公司是{i}」更自然。",
+          "修复建议（可同时满足规则5与长度约束）：把 distractor 模板改为与 main 同构的判断句，如「{p}担任外部顾问的公司是{i}」/「担任外部顾问的公司是{i}」，渲染长度 17/14/14/11，最大差恰为 6，且 distractor_relation 字段仍与分配行『担任外部顾问』一字不差。"
+        ]
+      },
+      "G14": {
+        "group_id": "G14",
+        "pass": true,
+        "issues": []
+      },
+      "G15": {
+        "group_id": "G15",
+        "pass": true,
+        "issues": []
+      }
+    },
+    "repaired": true,
+    "failed_initial": [
+      "G13"
+    ]
+  },
+  {
+    "batch": 4,
+    "groups": [
+      {
+        "distractor_first": "{p}为{i}提供天使投资",
+        "distractor_relation": "提供天使投资",
+        "distractor_second": "为{i}提供天使投资",
+        "domain": "公司",
+        "group_id": "G16",
+        "institution_1": "叠峰半导体",
+        "institution_2": "雾集半导体",
+        "main_first": "{p}在{i}领导核心技术研发",
+        "main_relation": "领导核心技术研发",
+        "main_second": "在{i}领导核心技术研发",
+        "person": "简临镜",
+        "question": "简临镜在哪家公司领导核心技术研发？"
+      },
+      {
+        "distractor_first": "{p}在{i}长期供职",
+        "distractor_relation": "长期供职",
+        "distractor_second": "在{i}长期供职",
+        "domain": "公司",
+        "group_id": "G17",
+        "institution_1": "雷蜓集团",
+        "institution_2": "昆梧集团",
+        "main_first": "{p}在{i}出任独立董事",
+        "main_relation": "担任独立董事",
+        "main_second": "在{i}出任独立董事",
+        "person": "晏清和",
+        "question": "晏清和在哪家公司担任独立董事？"
+      },
+      {
+        "distractor_first": "{p}在{i}完成管理培训生轮岗",
+        "distractor_relation": "完成管理培训生轮岗",
+        "distractor_second": "在{i}完成管理培训生轮岗",
+        "domain": "公司",
+        "group_id": "G18",
+        "institution_1": "澈鸣信息",
+        "institution_2": "岿然物流",
+        "main_first": "{p}在{i}担任区域总经理",
+        "main_relation": "担任区域总经理",
+        "main_second": "在{i}担任区域总经理",
+        "person": "封牧之",
+        "question": "封牧之在哪家公司担任区域总经理？"
+      },
+      {
+        "distractor_first": "{p}在{i}承接短期本地化项目",
+        "distractor_relation": "承接短期本地化项目",
+        "distractor_second": "在{i}承接短期本地化项目",
+        "domain": "公司",
+        "group_id": "G19",
+        "institution_1": "拓元传媒",
+        "institution_2": "千帆传媒",
+        "main_first": "{p}在{i}主导海外市场拓展",
+        "main_relation": "主导海外市场拓展",
+        "main_second": "在{i}主导海外市场拓展",
+        "person": "竺星回",
+        "question": "竺星回在哪家公司主导海外市场拓展？"
+      },
+      {
+        "distractor_first": "{p}在{i}签订商业授权合作",
+        "distractor_relation": "签订商业授权合作",
+        "distractor_second": "在{i}签订商业授权合作",
+        "domain": "公司",
+        "group_id": "G20",
+        "institution_1": "步霆智能",
+        "institution_2": "屿安智能",
+        "main_first": "{p}在{i}发起企业开源项目",
+        "main_relation": "发起企业开源项目",
+        "main_second": "在{i}发起企业开源项目",
+        "person": "濮怀瑾",
+        "question": "濮怀瑾在哪家公司发起开源项目？"
+      }
+    ],
+    "verdicts": {
+      "G16": {
+        "group_id": "G16",
+        "pass": true,
+        "issues": []
+      },
+      "G17": {
+        "group_id": "G17",
+        "pass": true,
+        "issues": []
+      },
+      "G18": {
+        "group_id": "G18",
+        "pass": true,
+        "issues": []
+      },
+      "G19": {
+        "group_id": "G19",
+        "pass": true,
+        "issues": []
+      },
+      "G20": {
+        "group_id": "G20",
+        "pass": true,
+        "issues": []
+      }
+    },
+    "repaired": false,
+    "failed_initial": []
+  },
+  {
+    "batch": 5,
+    "groups": [
+      {
+        "distractor_first": "{p}在{i}担任外聘评审",
+        "distractor_relation": "担任外聘评审",
+        "distractor_second": "在{i}担任外聘评审",
+        "domain": "研究所",
+        "group_id": "G21",
+        "institution_1": "灵湫研究所",
+        "institution_2": "叠嶂研究所",
+        "main_first": "{p}在{i}主持重大课题",
+        "main_relation": "主持重大课题",
+        "main_second": "在{i}主持重大课题",
+        "person": "华嘉树",
+        "question": "华嘉树在哪个研究所主持重大课题？"
+      },
+      {
+        "distractor_first": "{p}参与{i}的联合培养项目",
+        "distractor_relation": "参与联合培养项目",
+        "distractor_second": "参与{i}的联合培养项目",
+        "domain": "研究所",
+        "group_id": "G22",
+        "institution_1": "听松研究所",
+        "institution_2": "白鹭研究所",
+        "main_first": "{p}在{i}出任实验室主任",
+        "main_relation": "出任实验室主任",
+        "main_second": "在{i}出任实验室主任",
+        "person": "邵一苇",
+        "question": "邵一苇在哪个研究所出任实验室主任？"
+      },
+      {
+        "distractor_first": "{p}在{i}进行短期学术访问",
+        "distractor_relation": "进行短期学术访问",
+        "distractor_second": "随后在{i}进行短期学术访问",
+        "domain": "研究所",
+        "group_id": "G23",
+        "institution_1": "观星研究所",
+        "institution_2": "岱青研究所",
+        "main_first": "{p}入选{i}的青年学者计划",
+        "main_relation": "入选青年学者计划",
+        "main_second": "其后入选{i}的青年学者计划",
+        "person": "麦问渠",
+        "question": "麦问渠入选了哪个研究所的青年学者计划？"
+      },
+      {
+        "distractor_first": "{p}在{i}承担数据处理协作",
+        "distractor_relation": "承担数据处理协作",
+        "distractor_second": "又在{i}承担数据处理协作",
+        "domain": "研究所",
+        "group_id": "G24",
+        "institution_1": "沧溟研究所",
+        "institution_2": "烛霄研究所",
+        "main_first": "{p}在{i}牵头建设大科学装置",
+        "main_relation": "牵头建设大科学装置",
+        "main_second": "又在{i}牵头建设大科学装置",
+        "person": "荀鹿鸣",
+        "question": "荀鹿鸣在哪个研究所牵头建设大科学装置？"
+      },
+      {
+        "distractor_first": "{p}在{i}进修专项技术",
+        "distractor_relation": "进修专项技术",
+        "distractor_second": "后来又在{i}进修专项技术",
+        "domain": "医院",
+        "group_id": "G25",
+        "institution_1": "青蕖医院",
+        "institution_2": "岚汀医院",
+        "main_first": "{p}在{i}完成住院医师规范化培训",
+        "main_relation": "完成住院医师规范化培训",
+        "main_second": "在{i}完成住院医师规范化培训",
+        "person": "崔与归",
+        "question": "崔与归在哪家医院完成住院医师规范化培训？"
+      }
+    ],
+    "verdicts": {
+      "G21": {
+        "group_id": "G21",
+        "pass": true,
+        "issues": []
+      },
+      "G22": {
+        "group_id": "G22",
+        "pass": true,
+        "issues": []
+      },
+      "G23": {
+        "group_id": "G23",
+        "pass": true,
+        "issues": [
+          "非违规提示（规则7明确允许衔接词，未泄漏答案）: main_second 用「其后」、distractor_second 用「随后」，后半句两类模板衔接词不一致；建议统一为同一衔接词（如都用「随后」）或都不加，使后半句措辞与正误无任何表面对应。规则1-9及A-D均符合。"
+        ]
+      },
+      "G24": {
+        "group_id": "G24",
+        "pass": true,
+        "issues": []
+      },
+      "G25": {
+        "group_id": "G25",
+        "pass": true,
+        "issues": [
+          "非违规提示（规则7明确允许衔接词）: distractor_second 带「后来又」而 main_second 无衔接词，后半句两类模板不对称；建议统一。另外渲染后最长与最短小句相差 5 字（19 vs 14，规则5限值≤6，达标但为五组中最大），源于「完成住院医师规范化培训」(11字) 与「进修专项技术」(6字) 关系本身长度差，系分配行所定，非模板问题。规则1-9及A-D均符合。"
+        ]
+      }
+    },
+    "repaired": false,
+    "failed_initial": []
+  },
+  {
+    "batch": 6,
+    "groups": [
+      {
+        "distractor_relation": "担任特约会诊专家",
+        "distractor_first": "{p}受聘在{i}担任特约会诊专家",
+        "distractor_second": "受聘在{i}担任特约会诊专家",
+        "domain": "医院",
+        "group_id": "G26",
+        "institution_1": "望岑医院",
+        "institution_2": "慕荷医院",
+        "main_first": "{p}受聘在{i}出任心内科主任",
+        "main_relation": "出任心内科主任",
+        "main_second": "受聘在{i}出任心内科主任",
+        "person": "甘霁川",
+        "question": "甘霁川在哪家医院出任心内科主任？"
+      },
+      {
+        "distractor_relation": "开展短期学术交流",
+        "distractor_first": "{p}短期在{i}开展学术交流",
+        "distractor_second": "短期在{i}开展学术交流",
+        "domain": "医院",
+        "group_id": "G27",
+        "institution_1": "沁禾医院",
+        "institution_2": "青蘅医院",
+        "main_first": "{p}长期在{i}坐诊行医",
+        "main_relation": "长期坐诊",
+        "main_second": "长期在{i}坐诊行医",
+        "person": "秋承屿",
+        "question": "秋承屿在哪家医院长期坐诊？"
+      },
+      {
+        "distractor_relation": "刊发中篇节选",
+        "distractor_first": "{p}的中篇节选由{i}刊发",
+        "distractor_second": "该中篇节选由{i}刊发",
+        "domain": "出版社",
+        "group_id": "G28",
+        "institution_1": "拾贝出版社",
+        "institution_2": "芹圃出版社",
+        "main_first": "{p}的长篇处女作由{i}出版",
+        "main_relation": "出版长篇处女作",
+        "main_second": "其长篇处女作由{i}出版",
+        "person": "宁遂初",
+        "question": "宁遂初在哪家出版社出版了长篇处女作？"
+      },
+      {
+        "distractor_relation": "担任客座指挥",
+        "distractor_first": "{p}多次在{i}担任客座指挥",
+        "distractor_second": "多次在{i}担任客座指挥",
+        "domain": "乐团",
+        "group_id": "G29",
+        "institution_1": "云璈乐团",
+        "institution_2": "鲸音爱乐乐团",
+        "main_first": "{p}长年在{i}担任常任指挥",
+        "main_relation": "担任常任指挥",
+        "main_second": "长年在{i}担任常任指挥",
+        "person": "柏彻",
+        "question": "柏彻在哪个乐团担任常任指挥？"
+      },
+      {
+        "distractor_relation": "提供展品借展支持",
+        "distractor_first": "{p}在{i}提供展品借展支持",
+        "distractor_second": "在{i}提供展品借展支持",
+        "domain": "博物馆",
+        "group_id": "G30",
+        "institution_1": "九如博物馆",
+        "institution_2": "珮岚博物馆",
+        "main_first": "{p}在{i}担纲策划年度特展",
+        "main_relation": "策划年度特展",
+        "main_second": "在{i}担纲策划年度特展",
+        "person": "白适野",
+        "question": "白适野在哪个博物馆策划年度特展？"
+      }
+    ],
+    "verdicts": {
+      "G26": {
+        "group_id": "G26",
+        "pass": true,
+        "issues": []
+      },
+      "G27": {
+        "group_id": "G27",
+        "pass": true,
+        "issues": []
+      },
+      "G28": {
+        "group_id": "G28",
+        "pass": true,
+        "issues": []
+      },
+      "G29": {
+        "group_id": "G29",
+        "pass": true,
+        "issues": []
+      },
+      "G30": {
+        "group_id": "G30",
+        "pass": true,
+        "issues": []
+      }
+    },
+    "repaired": false,
+    "failed_initial": []
+  }
+]

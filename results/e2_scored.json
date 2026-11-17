@@ -1,0 +1,1853 @@
+{
+  "experiment": "e2_evidence_state_v1",
+  "timestamp_utc": "2026-11-17T13:03:19.568449+00:00",
+  "script": "experiments/e2_analyze.py",
+  "responses_file": "D:\\workspace\\rag-internal-mechanisms\\results\\e2_responses.json",
+  "n_total": 90,
+  "by_condition": {
+    "sufficient": {
+      "n": 30,
+      "counts": {
+        "names_gold": 30,
+        "names_other": 0,
+        "says_conflict": 0,
+        "says_uncertain": 0,
+        "mixed": 0,
+        "unrecognized": 0
+      },
+      "appropriate": 30,
+      "appropriate_rate": 1.0,
+      "scored": 30
+    },
+    "insufficient": {
+      "n": 30,
+      "counts": {
+        "names_gold": 0,
+        "names_other": 0,
+        "says_conflict": 0,
+        "says_uncertain": 30,
+        "mixed": 0,
+        "unrecognized": 0
+      },
+      "appropriate": 30,
+      "appropriate_rate": 1.0,
+      "scored": 30
+    },
+    "conflicting": {
+      "n": 30,
+      "counts": {
+        "names_gold": 1,
+        "names_other": 4,
+        "says_conflict": 21,
+        "says_uncertain": 4,
+        "mixed": 0,
+        "unrecognized": 0
+      },
+      "appropriate": 21,
+      "appropriate_rate": 0.7,
+      "scored": 30
+    }
+  },
+  "rows": [
+    {
+      "item_id": "G01_suff",
+      "group_id": "G01",
+      "domain": "大学",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "沈既明在哪所大学获得博士学位？",
+      "evidence": "沈既明在朔野大学获得博士学位；在澜庭大学从事博士后研究。",
+      "gold_answer": "朔野大学",
+      "core_gold": "朔野",
+      "other_answer": "澜庭大学",
+      "core_other": "澜庭",
+      "answer_raw": "朔野大学",
+      "eval": {
+        "answer_span": "朔野大学",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G01_insu",
+      "group_id": "G01",
+      "domain": "大学",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "沈既明在哪所大学获得博士学位？",
+      "evidence": "沈既明在朔野大学从事博士后研究；在澜庭大学从事博士后研究。",
+      "gold_answer": "朔野大学",
+      "core_gold": "朔野",
+      "other_answer": "澜庭大学",
+      "core_other": "澜庭",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G01_conf",
+      "group_id": "G01",
+      "domain": "大学",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "沈既明在哪所大学获得博士学位？",
+      "evidence": "沈既明在朔野大学获得博士学位；档案记录却显示其在澜庭大学获得博士学位。",
+      "gold_answer": "朔野大学",
+      "core_gold": "朔野",
+      "other_answer": "澜庭大学",
+      "core_other": "澜庭",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G02_suff",
+      "group_id": "G02",
+      "domain": "大学",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "顾昭桐在哪所大学攻读硕士学位？",
+      "evidence": "顾昭桐在屿声大学攻读硕士学位；在昭衡大学担任兼职讲师。",
+      "gold_answer": "屿声大学",
+      "core_gold": "屿声",
+      "other_answer": "昭衡大学",
+      "core_other": "昭衡",
+      "answer_raw": "屿声大学",
+      "eval": {
+        "answer_span": "屿声大学",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G02_insu",
+      "group_id": "G02",
+      "domain": "大学",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "顾昭桐在哪所大学攻读硕士学位？",
+      "evidence": "顾昭桐在屿声大学担任兼职讲师；在昭衡大学担任兼职讲师。",
+      "gold_answer": "屿声大学",
+      "core_gold": "屿声",
+      "other_answer": "昭衡大学",
+      "core_other": "昭衡",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G02_conf",
+      "group_id": "G02",
+      "domain": "大学",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "顾昭桐在哪所大学攻读硕士学位？",
+      "evidence": "顾昭桐在屿声大学攻读硕士学位；学籍档案却登记在昭衡大学攻读硕士学位。",
+      "gold_answer": "屿声大学",
+      "core_gold": "屿声",
+      "other_answer": "昭衡大学",
+      "core_other": "昭衡",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": false
+      }
+    },
+    {
+      "item_id": "G03_suff",
+      "group_id": "G03",
+      "domain": "大学",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "陆望澜在哪所大学完成本科学业？",
+      "evidence": "陆望澜在岑川大学完成本科学业；在沐棠大学进行访问研究。",
+      "gold_answer": "岑川大学",
+      "core_gold": "岑川",
+      "other_answer": "沐棠大学",
+      "core_other": "沐棠",
+      "answer_raw": "岑川大学",
+      "eval": {
+        "answer_span": "岑川大学",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G03_insu",
+      "group_id": "G03",
+      "domain": "大学",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "陆望澜在哪所大学完成本科学业？",
+      "evidence": "陆望澜在岑川大学进行访问研究；在沐棠大学进行访问研究。",
+      "gold_answer": "岑川大学",
+      "core_gold": "岑川",
+      "other_answer": "沐棠大学",
+      "core_other": "沐棠",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G03_conf",
+      "group_id": "G03",
+      "domain": "大学",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "陆望澜在哪所大学完成本科学业？",
+      "evidence": "陆望澜在岑川大学完成本科学业；另一份档案则显示其在沐棠大学完成本科学业。",
+      "gold_answer": "岑川大学",
+      "core_gold": "岑川",
+      "other_answer": "沐棠大学",
+      "core_other": "沐棠",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G04_suff",
+      "group_id": "G04",
+      "domain": "大学",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "温叙白在哪所大学长期任教？",
+      "evidence": "温叙白在汀兰大学长期任教；在栖迟大学短期讲学。",
+      "gold_answer": "汀兰大学",
+      "core_gold": "汀兰",
+      "other_answer": "栖迟大学",
+      "core_other": "栖迟",
+      "answer_raw": "汀兰大学",
+      "eval": {
+        "answer_span": "汀兰大学",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G04_insu",
+      "group_id": "G04",
+      "domain": "大学",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "温叙白在哪所大学长期任教？",
+      "evidence": "温叙白在汀兰大学短期讲学；在栖迟大学短期讲学。",
+      "gold_answer": "汀兰大学",
+      "core_gold": "汀兰",
+      "other_answer": "栖迟大学",
+      "core_other": "栖迟",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G04_conf",
+      "group_id": "G04",
+      "domain": "大学",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "温叙白在哪所大学长期任教？",
+      "evidence": "温叙白在汀兰大学长期任教；人事档案却登记其在栖迟大学长期任教。",
+      "gold_answer": "汀兰大学",
+      "core_gold": "汀兰",
+      "other_answer": "栖迟大学",
+      "core_other": "栖迟",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G05_suff",
+      "group_id": "G05",
+      "domain": "大学",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "池砚秋在哪所大学出任法学院院长？",
+      "evidence": "池砚秋在竹屿大学出任法学院院长；在雪泾大学受聘客座教授。",
+      "gold_answer": "竹屿大学",
+      "core_gold": "竹屿",
+      "other_answer": "雪泾大学",
+      "core_other": "雪泾",
+      "answer_raw": "竹屿大学",
+      "eval": {
+        "answer_span": "竹屿大学",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G05_insu",
+      "group_id": "G05",
+      "domain": "大学",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "池砚秋在哪所大学出任法学院院长？",
+      "evidence": "池砚秋在竹屿大学受聘客座教授；在雪泾大学受聘客座教授。",
+      "gold_answer": "竹屿大学",
+      "core_gold": "竹屿",
+      "other_answer": "雪泾大学",
+      "core_other": "雪泾",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G05_conf",
+      "group_id": "G05",
+      "domain": "大学",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "池砚秋在哪所大学出任法学院院长？",
+      "evidence": "池砚秋在竹屿大学出任法学院院长；聘任文件却显示其在雪泾大学出任法学院院长。",
+      "gold_answer": "竹屿大学",
+      "core_gold": "竹屿",
+      "other_answer": "雪泾大学",
+      "core_other": "雪泾",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G06_suff",
+      "group_id": "G06",
+      "domain": "大学",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "郁疏桐在哪所大学获授名誉博士学位？",
+      "evidence": "郁疏桐曾在泠然大学获授名誉博士学位；长期在淮声大学开展合作研究。",
+      "gold_answer": "泠然大学",
+      "core_gold": "泠然",
+      "other_answer": "淮声大学",
+      "core_other": "淮声",
+      "answer_raw": "泠然大学",
+      "eval": {
+        "answer_span": "泠然大学",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G06_insu",
+      "group_id": "G06",
+      "domain": "大学",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "郁疏桐在哪所大学获授名誉博士学位？",
+      "evidence": "郁疏桐长期在泠然大学开展合作研究；长期在淮声大学开展合作研究。",
+      "gold_answer": "泠然大学",
+      "core_gold": "泠然",
+      "other_answer": "淮声大学",
+      "core_other": "淮声",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G06_conf",
+      "group_id": "G06",
+      "domain": "大学",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "郁疏桐在哪所大学获授名誉博士学位？",
+      "evidence": "郁疏桐曾在泠然大学获授名誉博士学位；另一份资料记载其在淮声大学获授名誉博士学位。",
+      "gold_answer": "泠然大学",
+      "core_gold": "泠然",
+      "other_answer": "淮声大学",
+      "core_other": "淮声",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G07_suff",
+      "group_id": "G07",
+      "domain": "大学",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "黎觉非在哪所大学设立冠名奖学金？",
+      "evidence": "黎觉非在鹤汀大学设立冠名奖学金；在叙川大学担任产业顾问。",
+      "gold_answer": "鹤汀大学",
+      "core_gold": "鹤汀",
+      "other_answer": "叙川大学",
+      "core_other": "叙川",
+      "answer_raw": "鹤汀大学",
+      "eval": {
+        "answer_span": "鹤汀大学",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G07_insu",
+      "group_id": "G07",
+      "domain": "大学",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "黎觉非在哪所大学设立冠名奖学金？",
+      "evidence": "黎觉非在鹤汀大学担任产业顾问；在叙川大学担任产业顾问。",
+      "gold_answer": "鹤汀大学",
+      "core_gold": "鹤汀",
+      "other_answer": "叙川大学",
+      "core_other": "叙川",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G07_conf",
+      "group_id": "G07",
+      "domain": "大学",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "黎觉非在哪所大学设立冠名奖学金？",
+      "evidence": "黎觉非在鹤汀大学设立冠名奖学金；该冠名奖学金实际设立于叙川大学。",
+      "gold_answer": "鹤汀大学",
+      "core_gold": "鹤汀",
+      "other_answer": "叙川大学",
+      "core_other": "叙川",
+      "answer_raw": "叙川大学",
+      "eval": {
+        "answer_span": "叙川大学",
+        "behavior": "names_other",
+        "behavior_note": "仅含另一机构核心词",
+        "appropriate": false
+      }
+    },
+    {
+      "item_id": "G08_suff",
+      "group_id": "G08",
+      "domain": "大学",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "桑无咎在哪所大学主持联合实验室？",
+      "evidence": "桑无咎于拾翠大学主持联合实验室；于遂初大学讲授暑期课程。",
+      "gold_answer": "拾翠大学",
+      "core_gold": "拾翠",
+      "other_answer": "遂初大学",
+      "core_other": "遂初",
+      "answer_raw": "拾翠大学",
+      "eval": {
+        "answer_span": "拾翠大学",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G08_insu",
+      "group_id": "G08",
+      "domain": "大学",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "桑无咎在哪所大学主持联合实验室？",
+      "evidence": "桑无咎于拾翠大学讲授暑期课程；于遂初大学讲授暑期课程。",
+      "gold_answer": "拾翠大学",
+      "core_gold": "拾翠",
+      "other_answer": "遂初大学",
+      "core_other": "遂初",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G08_conf",
+      "group_id": "G08",
+      "domain": "大学",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "桑无咎在哪所大学主持联合实验室？",
+      "evidence": "桑无咎于拾翠大学主持联合实验室；另一份材料记载其于遂初大学主持联合实验室。",
+      "gold_answer": "拾翠大学",
+      "core_gold": "拾翠",
+      "other_answer": "遂初大学",
+      "core_other": "遂初",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G09_suff",
+      "group_id": "G09",
+      "domain": "大学",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "应雪岑在哪所大学担任图书馆特藏部主任？",
+      "evidence": "应雪岑在岫云大学担任图书馆特藏部主任；长期在兰皋大学参与校史研究。",
+      "gold_answer": "岫云大学",
+      "core_gold": "岫云",
+      "other_answer": "兰皋大学",
+      "core_other": "兰皋",
+      "answer_raw": "岫云大学",
+      "eval": {
+        "answer_span": "岫云大学",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G09_insu",
+      "group_id": "G09",
+      "domain": "大学",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "应雪岑在哪所大学担任图书馆特藏部主任？",
+      "evidence": "应雪岑长期在岫云大学参与校史研究；长期在兰皋大学参与校史研究。",
+      "gold_answer": "岫云大学",
+      "core_gold": "岫云",
+      "other_answer": "兰皋大学",
+      "core_other": "兰皋",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G09_conf",
+      "group_id": "G09",
+      "domain": "大学",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "应雪岑在哪所大学担任图书馆特藏部主任？",
+      "evidence": "应雪岑在岫云大学担任图书馆特藏部主任；官方登记其为兰皋大学图书馆特藏部主任。",
+      "gold_answer": "岫云大学",
+      "core_gold": "岫云",
+      "other_answer": "兰皋大学",
+      "core_other": "兰皋",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G10_suff",
+      "group_id": "G10",
+      "domain": "大学",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "阮青崖在哪所大学攻读第二学位？",
+      "evidence": "阮青崖在鹿溪大学攻读第二学位；在采菱大学指导田径队训练。",
+      "gold_answer": "鹿溪大学",
+      "core_gold": "鹿溪",
+      "other_answer": "采菱大学",
+      "core_other": "采菱",
+      "answer_raw": "鹿溪大学",
+      "eval": {
+        "answer_span": "鹿溪大学",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G10_insu",
+      "group_id": "G10",
+      "domain": "大学",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "阮青崖在哪所大学攻读第二学位？",
+      "evidence": "阮青崖在鹿溪大学指导田径队训练；在采菱大学指导田径队训练。",
+      "gold_answer": "鹿溪大学",
+      "core_gold": "鹿溪",
+      "other_answer": "采菱大学",
+      "core_other": "采菱",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G10_conf",
+      "group_id": "G10",
+      "domain": "大学",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "阮青崖在哪所大学攻读第二学位？",
+      "evidence": "阮青崖在鹿溪大学攻读第二学位；学籍档案显示其在采菱大学攻读第二学位。",
+      "gold_answer": "鹿溪大学",
+      "core_gold": "鹿溪",
+      "other_answer": "采菱大学",
+      "core_other": "采菱",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G11_suff",
+      "group_id": "G11",
+      "domain": "大学",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "骆云笙在哪所大学担任辩论队主教练？",
+      "evidence": "骆云笙在灼华大学担任辩论队主教练；在悠然大学开设通识讲座。",
+      "gold_answer": "灼华大学",
+      "core_gold": "灼华",
+      "other_answer": "悠然大学",
+      "core_other": "悠然",
+      "answer_raw": "灼华大学",
+      "eval": {
+        "answer_span": "灼华大学",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G11_insu",
+      "group_id": "G11",
+      "domain": "大学",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "骆云笙在哪所大学担任辩论队主教练？",
+      "evidence": "骆云笙在灼华大学开设通识讲座；在悠然大学开设通识讲座。",
+      "gold_answer": "灼华大学",
+      "core_gold": "灼华",
+      "other_answer": "悠然大学",
+      "core_other": "悠然",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G11_conf",
+      "group_id": "G11",
+      "domain": "大学",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "骆云笙在哪所大学担任辩论队主教练？",
+      "evidence": "骆云笙在灼华大学担任辩论队主教练；另一份资料显示其在悠然大学担任辩论队主教练。",
+      "gold_answer": "灼华大学",
+      "core_gold": "灼华",
+      "other_answer": "悠然大学",
+      "core_other": "悠然",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G12_suff",
+      "group_id": "G12",
+      "domain": "大学",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "闵鹤知被哪所大学评为杰出校友？",
+      "evidence": "闵鹤知被曲澜大学评为杰出校友；受邀在澍雨大学毕业典礼演讲。",
+      "gold_answer": "曲澜大学",
+      "core_gold": "曲澜",
+      "other_answer": "澍雨大学",
+      "core_other": "澍雨",
+      "answer_raw": "曲澜大学",
+      "eval": {
+        "answer_span": "曲澜大学",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G12_insu",
+      "group_id": "G12",
+      "domain": "大学",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "闵鹤知被哪所大学评为杰出校友？",
+      "evidence": "闵鹤知受邀在曲澜大学毕业典礼演讲；受邀在澍雨大学毕业典礼演讲。",
+      "gold_answer": "曲澜大学",
+      "core_gold": "曲澜",
+      "other_answer": "澍雨大学",
+      "core_other": "澍雨",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G12_conf",
+      "group_id": "G12",
+      "domain": "大学",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "闵鹤知被哪所大学评为杰出校友？",
+      "evidence": "闵鹤知被曲澜大学评为杰出校友；另一份官方档案则显示其被澍雨大学评为杰出校友。",
+      "gold_answer": "曲澜大学",
+      "core_gold": "曲澜",
+      "other_answer": "澍雨大学",
+      "core_other": "澍雨",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G13_suff",
+      "group_id": "G13",
+      "domain": "公司",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "祝长野创立了哪家公司？",
+      "evidence": "祝长野所创立的公司是云枢科技；担任外部顾问的公司是星阑信息。",
+      "gold_answer": "云枢科技",
+      "core_gold": "云枢",
+      "other_answer": "星阑信息",
+      "core_other": "星阑",
+      "answer_raw": "云枢科技",
+      "eval": {
+        "answer_span": "云枢科技",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G13_insu",
+      "group_id": "G13",
+      "domain": "公司",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "祝长野创立了哪家公司？",
+      "evidence": "祝长野在云枢科技担任外部顾问；在星阑信息担任外部顾问。",
+      "gold_answer": "云枢科技",
+      "core_gold": "云枢",
+      "other_answer": "星阑信息",
+      "core_other": "星阑",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G13_conf",
+      "group_id": "G13",
+      "domain": "公司",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "祝长野创立了哪家公司？",
+      "evidence": "祝长野所创立的公司是云枢科技；工商登记显示其创立的公司为星阑信息。",
+      "gold_answer": "云枢科技",
+      "core_gold": "云枢",
+      "other_answer": "星阑信息",
+      "core_other": "星阑",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": false
+      }
+    },
+    {
+      "item_id": "G14_suff",
+      "group_id": "G14",
+      "domain": "公司",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "屠文茵在哪家公司出任首任首席执行官？",
+      "evidence": "屠文茵在曜石控股出任首任首席执行官；在燧石智能担任首席科学家。",
+      "gold_answer": "曜石控股",
+      "core_gold": "曜石",
+      "other_answer": "燧石智能",
+      "core_other": "燧石",
+      "answer_raw": "曜石控股",
+      "eval": {
+        "answer_span": "曜石控股",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G14_insu",
+      "group_id": "G14",
+      "domain": "公司",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "屠文茵在哪家公司出任首任首席执行官？",
+      "evidence": "屠文茵在曜石控股担任首席科学家；在燧石智能担任首席科学家。",
+      "gold_answer": "曜石控股",
+      "core_gold": "曜石",
+      "other_answer": "燧石智能",
+      "core_other": "燧石",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G14_conf",
+      "group_id": "G14",
+      "domain": "公司",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "屠文茵在哪家公司出任首任首席执行官？",
+      "evidence": "屠文茵在曜石控股出任首任首席执行官；另一份档案则称其在燧石智能任首任首席执行官。",
+      "gold_answer": "曜石控股",
+      "core_gold": "曜石",
+      "other_answer": "燧石智能",
+      "core_other": "燧石",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G15_suff",
+      "group_id": "G15",
+      "domain": "公司",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "符听澜在哪家公司主持发布旗舰产品？",
+      "evidence": "符听澜在银汐科技主持发布旗舰产品；在苇航科技参与早期内测。",
+      "gold_answer": "银汐科技",
+      "core_gold": "银汐",
+      "other_answer": "苇航科技",
+      "core_other": "苇航",
+      "answer_raw": "银汐科技",
+      "eval": {
+        "answer_span": "银汐科技",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G15_insu",
+      "group_id": "G15",
+      "domain": "公司",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "符听澜在哪家公司主持发布旗舰产品？",
+      "evidence": "符听澜在银汐科技参与早期内测；在苇航科技参与早期内测。",
+      "gold_answer": "银汐科技",
+      "core_gold": "银汐",
+      "other_answer": "苇航科技",
+      "core_other": "苇航",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G15_conf",
+      "group_id": "G15",
+      "domain": "公司",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "符听澜在哪家公司主持发布旗舰产品？",
+      "evidence": "符听澜在银汐科技主持发布旗舰产品；另一份新闻稿称其在苇航科技主持发布旗舰产品。",
+      "gold_answer": "银汐科技",
+      "core_gold": "银汐",
+      "other_answer": "苇航科技",
+      "core_other": "苇航",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G16_suff",
+      "group_id": "G16",
+      "domain": "公司",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "简临镜在哪家公司领导核心技术研发？",
+      "evidence": "简临镜在雾集半导体领导核心技术研发；为叠峰半导体提供天使投资。",
+      "gold_answer": "雾集半导体",
+      "core_gold": "雾集",
+      "other_answer": "叠峰半导体",
+      "core_other": "叠峰",
+      "answer_raw": "雾集半导体",
+      "eval": {
+        "answer_span": "雾集半导体",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G16_insu",
+      "group_id": "G16",
+      "domain": "公司",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "简临镜在哪家公司领导核心技术研发？",
+      "evidence": "简临镜为雾集半导体提供天使投资；为叠峰半导体提供天使投资。",
+      "gold_answer": "雾集半导体",
+      "core_gold": "雾集",
+      "other_answer": "叠峰半导体",
+      "core_other": "叠峰",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G16_conf",
+      "group_id": "G16",
+      "domain": "公司",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "简临镜在哪家公司领导核心技术研发？",
+      "evidence": "简临镜在雾集半导体领导核心技术研发；而其领导核心技术研发的公司仅有叠峰半导体一家。",
+      "gold_answer": "雾集半导体",
+      "core_gold": "雾集",
+      "other_answer": "叠峰半导体",
+      "core_other": "叠峰",
+      "answer_raw": "叠峰半导体",
+      "eval": {
+        "answer_span": "叠峰半导体",
+        "behavior": "names_other",
+        "behavior_note": "仅含另一机构核心词",
+        "appropriate": false
+      }
+    },
+    {
+      "item_id": "G17_suff",
+      "group_id": "G17",
+      "domain": "公司",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "晏清和在哪家公司担任独立董事？",
+      "evidence": "晏清和在昆梧集团出任独立董事；在雷蜓集团长期供职。",
+      "gold_answer": "昆梧集团",
+      "core_gold": "昆梧",
+      "other_answer": "雷蜓集团",
+      "core_other": "雷蜓",
+      "answer_raw": "昆梧集团",
+      "eval": {
+        "answer_span": "昆梧集团",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G17_insu",
+      "group_id": "G17",
+      "domain": "公司",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "晏清和在哪家公司担任独立董事？",
+      "evidence": "晏清和在昆梧集团长期供职；在雷蜓集团长期供职。",
+      "gold_answer": "昆梧集团",
+      "core_gold": "昆梧",
+      "other_answer": "雷蜓集团",
+      "core_other": "雷蜓",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G17_conf",
+      "group_id": "G17",
+      "domain": "公司",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "晏清和在哪家公司担任独立董事？",
+      "evidence": "晏清和在昆梧集团出任独立董事；而其独立董事任职仅有雷蜓集团一家。",
+      "gold_answer": "昆梧集团",
+      "core_gold": "昆梧",
+      "other_answer": "雷蜓集团",
+      "core_other": "雷蜓",
+      "answer_raw": "昆梧集团",
+      "eval": {
+        "answer_span": "昆梧集团",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": false
+      }
+    },
+    {
+      "item_id": "G18_suff",
+      "group_id": "G18",
+      "domain": "公司",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "封牧之在哪家公司担任区域总经理？",
+      "evidence": "封牧之在岿然物流担任区域总经理；在澈鸣信息完成管理培训生轮岗。",
+      "gold_answer": "岿然物流",
+      "core_gold": "岿然",
+      "other_answer": "澈鸣信息",
+      "core_other": "澈鸣",
+      "answer_raw": "岿然物流",
+      "eval": {
+        "answer_span": "岿然物流",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G18_insu",
+      "group_id": "G18",
+      "domain": "公司",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "封牧之在哪家公司担任区域总经理？",
+      "evidence": "封牧之在岿然物流完成管理培训生轮岗；在澈鸣信息完成管理培训生轮岗。",
+      "gold_answer": "岿然物流",
+      "core_gold": "岿然",
+      "other_answer": "澈鸣信息",
+      "core_other": "澈鸣",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G18_conf",
+      "group_id": "G18",
+      "domain": "公司",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "封牧之在哪家公司担任区域总经理？",
+      "evidence": "封牧之在岿然物流担任区域总经理；而其担任区域总经理的公司仅有澈鸣信息一家。",
+      "gold_answer": "岿然物流",
+      "core_gold": "岿然",
+      "other_answer": "澈鸣信息",
+      "core_other": "澈鸣",
+      "answer_raw": "澈鸣信息",
+      "eval": {
+        "answer_span": "澈鸣信息",
+        "behavior": "names_other",
+        "behavior_note": "仅含另一机构核心词",
+        "appropriate": false
+      }
+    },
+    {
+      "item_id": "G19_suff",
+      "group_id": "G19",
+      "domain": "公司",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "竺星回在哪家公司主导海外市场拓展？",
+      "evidence": "竺星回在拓元传媒主导海外市场拓展；在千帆传媒承接短期本地化项目。",
+      "gold_answer": "拓元传媒",
+      "core_gold": "拓元",
+      "other_answer": "千帆传媒",
+      "core_other": "千帆",
+      "answer_raw": "拓元传媒",
+      "eval": {
+        "answer_span": "拓元传媒",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G19_insu",
+      "group_id": "G19",
+      "domain": "公司",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "竺星回在哪家公司主导海外市场拓展？",
+      "evidence": "竺星回在拓元传媒承接短期本地化项目；在千帆传媒承接短期本地化项目。",
+      "gold_answer": "拓元传媒",
+      "core_gold": "拓元",
+      "other_answer": "千帆传媒",
+      "core_other": "千帆",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G19_conf",
+      "group_id": "G19",
+      "domain": "公司",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "竺星回在哪家公司主导海外市场拓展？",
+      "evidence": "竺星回在拓元传媒主导海外市场拓展；而其主导海外市场拓展的公司仅有千帆传媒一家。",
+      "gold_answer": "拓元传媒",
+      "core_gold": "拓元",
+      "other_answer": "千帆传媒",
+      "core_other": "千帆",
+      "answer_raw": "千帆传媒",
+      "eval": {
+        "answer_span": "千帆传媒",
+        "behavior": "names_other",
+        "behavior_note": "仅含另一机构核心词",
+        "appropriate": false
+      }
+    },
+    {
+      "item_id": "G20_suff",
+      "group_id": "G20",
+      "domain": "公司",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "濮怀瑾在哪家公司发起开源项目？",
+      "evidence": "濮怀瑾在步霆智能发起企业开源项目；在屿安智能签订商业授权合作。",
+      "gold_answer": "步霆智能",
+      "core_gold": "步霆",
+      "other_answer": "屿安智能",
+      "core_other": "屿安",
+      "answer_raw": "步霆智能",
+      "eval": {
+        "answer_span": "步霆智能",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G20_insu",
+      "group_id": "G20",
+      "domain": "公司",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "濮怀瑾在哪家公司发起开源项目？",
+      "evidence": "濮怀瑾在步霆智能签订商业授权合作；在屿安智能签订商业授权合作。",
+      "gold_answer": "步霆智能",
+      "core_gold": "步霆",
+      "other_answer": "屿安智能",
+      "core_other": "屿安",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G20_conf",
+      "group_id": "G20",
+      "domain": "公司",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "濮怀瑾在哪家公司发起开源项目？",
+      "evidence": "濮怀瑾在步霆智能发起企业开源项目；另一份记录称该项目由其在屿安智能发起。",
+      "gold_answer": "步霆智能",
+      "core_gold": "步霆",
+      "other_answer": "屿安智能",
+      "core_other": "屿安",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G21_suff",
+      "group_id": "G21",
+      "domain": "研究所",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "华嘉树在哪个研究所主持重大课题？",
+      "evidence": "华嘉树在叠嶂研究所主持重大课题；在灵湫研究所担任外聘评审。",
+      "gold_answer": "叠嶂研究所",
+      "core_gold": "叠嶂",
+      "other_answer": "灵湫研究所",
+      "core_other": "灵湫",
+      "answer_raw": "叠嶂研究所",
+      "eval": {
+        "answer_span": "叠嶂研究所",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G21_insu",
+      "group_id": "G21",
+      "domain": "研究所",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "华嘉树在哪个研究所主持重大课题？",
+      "evidence": "华嘉树在叠嶂研究所担任外聘评审；在灵湫研究所担任外聘评审。",
+      "gold_answer": "叠嶂研究所",
+      "core_gold": "叠嶂",
+      "other_answer": "灵湫研究所",
+      "core_other": "灵湫",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G21_conf",
+      "group_id": "G21",
+      "domain": "研究所",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "华嘉树在哪个研究所主持重大课题？",
+      "evidence": "华嘉树在叠嶂研究所主持重大课题；另一份资料显示其在灵湫研究所主持重大课题。",
+      "gold_answer": "叠嶂研究所",
+      "core_gold": "叠嶂",
+      "other_answer": "灵湫研究所",
+      "core_other": "灵湫",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G22_suff",
+      "group_id": "G22",
+      "domain": "研究所",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "邵一苇在哪个研究所出任实验室主任？",
+      "evidence": "邵一苇在听松研究所出任实验室主任；参与白鹭研究所的联合培养项目。",
+      "gold_answer": "听松研究所",
+      "core_gold": "听松",
+      "other_answer": "白鹭研究所",
+      "core_other": "白鹭",
+      "answer_raw": "听松研究所",
+      "eval": {
+        "answer_span": "听松研究所",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G22_insu",
+      "group_id": "G22",
+      "domain": "研究所",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "邵一苇在哪个研究所出任实验室主任？",
+      "evidence": "邵一苇参与听松研究所的联合培养项目；参与白鹭研究所的联合培养项目。",
+      "gold_answer": "听松研究所",
+      "core_gold": "听松",
+      "other_answer": "白鹭研究所",
+      "core_other": "白鹭",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G22_conf",
+      "group_id": "G22",
+      "domain": "研究所",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "邵一苇在哪个研究所出任实验室主任？",
+      "evidence": "邵一苇在听松研究所出任实验室主任；另一份档案记录其在白鹭研究所出任实验室主任。",
+      "gold_answer": "听松研究所",
+      "core_gold": "听松",
+      "other_answer": "白鹭研究所",
+      "core_other": "白鹭",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G23_suff",
+      "group_id": "G23",
+      "domain": "研究所",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "麦问渠入选了哪个研究所的青年学者计划？",
+      "evidence": "麦问渠入选观星研究所的青年学者计划；随后在岱青研究所进行短期学术访问。",
+      "gold_answer": "观星研究所",
+      "core_gold": "观星",
+      "other_answer": "岱青研究所",
+      "core_other": "岱青",
+      "answer_raw": "观星研究所",
+      "eval": {
+        "answer_span": "观星研究所",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G23_insu",
+      "group_id": "G23",
+      "domain": "研究所",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "麦问渠入选了哪个研究所的青年学者计划？",
+      "evidence": "麦问渠在观星研究所进行短期学术访问；随后在岱青研究所进行短期学术访问。",
+      "gold_answer": "观星研究所",
+      "core_gold": "观星",
+      "other_answer": "岱青研究所",
+      "core_other": "岱青",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G23_conf",
+      "group_id": "G23",
+      "domain": "研究所",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "麦问渠入选了哪个研究所的青年学者计划？",
+      "evidence": "麦问渠入选观星研究所的青年学者计划；另一份名单显示其入选岱青研究所的青年学者计划。",
+      "gold_answer": "观星研究所",
+      "core_gold": "观星",
+      "other_answer": "岱青研究所",
+      "core_other": "岱青",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G24_suff",
+      "group_id": "G24",
+      "domain": "研究所",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "荀鹿鸣在哪个研究所牵头建设大科学装置？",
+      "evidence": "荀鹿鸣在沧溟研究所牵头建设大科学装置；又在烛霄研究所承担数据处理协作。",
+      "gold_answer": "沧溟研究所",
+      "core_gold": "沧溟",
+      "other_answer": "烛霄研究所",
+      "core_other": "烛霄",
+      "answer_raw": "沧溟研究所",
+      "eval": {
+        "answer_span": "沧溟研究所",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G24_insu",
+      "group_id": "G24",
+      "domain": "研究所",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "荀鹿鸣在哪个研究所牵头建设大科学装置？",
+      "evidence": "荀鹿鸣在沧溟研究所承担数据处理协作；又在烛霄研究所承担数据处理协作。",
+      "gold_answer": "沧溟研究所",
+      "core_gold": "沧溟",
+      "other_answer": "烛霄研究所",
+      "core_other": "烛霄",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G24_conf",
+      "group_id": "G24",
+      "domain": "研究所",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "荀鹿鸣在哪个研究所牵头建设大科学装置？",
+      "evidence": "荀鹿鸣在沧溟研究所牵头建设大科学装置；官方登记其在烛霄研究所牵头建设大科学装置。",
+      "gold_answer": "沧溟研究所",
+      "core_gold": "沧溟",
+      "other_answer": "烛霄研究所",
+      "core_other": "烛霄",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G25_suff",
+      "group_id": "G25",
+      "domain": "医院",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "崔与归在哪家医院完成住院医师规范化培训？",
+      "evidence": "崔与归在岚汀医院完成住院医师规范化培训；后来又在青蕖医院进修专项技术。",
+      "gold_answer": "岚汀医院",
+      "core_gold": "岚汀",
+      "other_answer": "青蕖医院",
+      "core_other": "青蕖",
+      "answer_raw": "岚汀医院",
+      "eval": {
+        "answer_span": "岚汀医院",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G25_insu",
+      "group_id": "G25",
+      "domain": "医院",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "崔与归在哪家医院完成住院医师规范化培训？",
+      "evidence": "崔与归在岚汀医院进修专项技术；后来又在青蕖医院进修专项技术。",
+      "gold_answer": "岚汀医院",
+      "core_gold": "岚汀",
+      "other_answer": "青蕖医院",
+      "core_other": "青蕖",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G25_conf",
+      "group_id": "G25",
+      "domain": "医院",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "崔与归在哪家医院完成住院医师规范化培训？",
+      "evidence": "崔与归在岚汀医院完成住院医师规范化培训；其住院医师规范化培训是在青蕖医院完成的。",
+      "gold_answer": "岚汀医院",
+      "core_gold": "岚汀",
+      "other_answer": "青蕖医院",
+      "core_other": "青蕖",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": false
+      }
+    },
+    {
+      "item_id": "G26_suff",
+      "group_id": "G26",
+      "domain": "医院",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "甘霁川在哪家医院出任心内科主任？",
+      "evidence": "甘霁川受聘在望岑医院出任心内科主任；受聘在慕荷医院担任特约会诊专家。",
+      "gold_answer": "望岑医院",
+      "core_gold": "望岑",
+      "other_answer": "慕荷医院",
+      "core_other": "慕荷",
+      "answer_raw": "望岑医院",
+      "eval": {
+        "answer_span": "望岑医院",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G26_insu",
+      "group_id": "G26",
+      "domain": "医院",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "甘霁川在哪家医院出任心内科主任？",
+      "evidence": "甘霁川受聘在望岑医院担任特约会诊专家；受聘在慕荷医院担任特约会诊专家。",
+      "gold_answer": "望岑医院",
+      "core_gold": "望岑",
+      "other_answer": "慕荷医院",
+      "core_other": "慕荷",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G26_conf",
+      "group_id": "G26",
+      "domain": "医院",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "甘霁川在哪家医院出任心内科主任？",
+      "evidence": "甘霁川受聘在望岑医院出任心内科主任；另一份档案显示其受聘在慕荷医院出任心内科主任。",
+      "gold_answer": "望岑医院",
+      "core_gold": "望岑",
+      "other_answer": "慕荷医院",
+      "core_other": "慕荷",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G27_suff",
+      "group_id": "G27",
+      "domain": "医院",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "秋承屿在哪家医院长期坐诊？",
+      "evidence": "秋承屿长期在青蘅医院坐诊行医；短期在沁禾医院开展学术交流。",
+      "gold_answer": "青蘅医院",
+      "core_gold": "青蘅",
+      "other_answer": "沁禾医院",
+      "core_other": "沁禾",
+      "answer_raw": "青蘅医院",
+      "eval": {
+        "answer_span": "青蘅医院",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G27_insu",
+      "group_id": "G27",
+      "domain": "医院",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "秋承屿在哪家医院长期坐诊？",
+      "evidence": "秋承屿短期在青蘅医院开展学术交流；短期在沁禾医院开展学术交流。",
+      "gold_answer": "青蘅医院",
+      "core_gold": "青蘅",
+      "other_answer": "沁禾医院",
+      "core_other": "沁禾",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G27_conf",
+      "group_id": "G27",
+      "domain": "医院",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "秋承屿在哪家医院长期坐诊？",
+      "evidence": "秋承屿长期在青蘅医院坐诊行医；另一份资料显示其长期在沁禾医院坐诊行医。",
+      "gold_answer": "青蘅医院",
+      "core_gold": "青蘅",
+      "other_answer": "沁禾医院",
+      "core_other": "沁禾",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G28_suff",
+      "group_id": "G28",
+      "domain": "出版社",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "宁遂初在哪家出版社出版了长篇处女作？",
+      "evidence": "宁遂初的长篇处女作由芹圃出版社出版；该中篇节选由拾贝出版社刊发。",
+      "gold_answer": "芹圃出版社",
+      "core_gold": "芹圃",
+      "other_answer": "拾贝出版社",
+      "core_other": "拾贝",
+      "answer_raw": "芹圃出版社",
+      "eval": {
+        "answer_span": "芹圃出版社",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G28_insu",
+      "group_id": "G28",
+      "domain": "出版社",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "宁遂初在哪家出版社出版了长篇处女作？",
+      "evidence": "宁遂初的中篇节选由芹圃出版社刊发；另一部中篇的节选由拾贝出版社刊发。",
+      "gold_answer": "芹圃出版社",
+      "core_gold": "芹圃",
+      "other_answer": "拾贝出版社",
+      "core_other": "拾贝",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G28_conf",
+      "group_id": "G28",
+      "domain": "出版社",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "宁遂初在哪家出版社出版了长篇处女作？",
+      "evidence": "宁遂初的长篇处女作由芹圃出版社出版；另一份资料记载其长篇处女作由拾贝出版社出版。",
+      "gold_answer": "芹圃出版社",
+      "core_gold": "芹圃",
+      "other_answer": "拾贝出版社",
+      "core_other": "拾贝",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G29_suff",
+      "group_id": "G29",
+      "domain": "乐团",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "柏彻在哪个乐团担任常任指挥？",
+      "evidence": "柏彻长年在鲸音爱乐乐团担任常任指挥；多次在云璈乐团担任客座指挥。",
+      "gold_answer": "鲸音爱乐乐团",
+      "core_gold": "鲸音",
+      "other_answer": "云璈乐团",
+      "core_other": "云璈",
+      "answer_raw": "鲸音爱乐乐团",
+      "eval": {
+        "answer_span": "鲸音爱乐乐团",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G29_insu",
+      "group_id": "G29",
+      "domain": "乐团",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "柏彻在哪个乐团担任常任指挥？",
+      "evidence": "柏彻多次在鲸音爱乐乐团担任客座指挥；多次在云璈乐团担任客座指挥。",
+      "gold_answer": "鲸音爱乐乐团",
+      "core_gold": "鲸音",
+      "other_answer": "云璈乐团",
+      "core_other": "云璈",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G29_conf",
+      "group_id": "G29",
+      "domain": "乐团",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "柏彻在哪个乐团担任常任指挥？",
+      "evidence": "柏彻长年在鲸音爱乐乐团担任常任指挥；另一份档案记录其长年在云璈乐团担任常任指挥。",
+      "gold_answer": "鲸音爱乐乐团",
+      "core_gold": "鲸音",
+      "other_answer": "云璈乐团",
+      "core_other": "云璈",
+      "answer_raw": "证据冲突",
+      "eval": {
+        "answer_span": "证据冲突",
+        "behavior": "says_conflict",
+        "behavior_note": "命中冲突表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G30_suff",
+      "group_id": "G30",
+      "domain": "博物馆",
+      "condition": "sufficient",
+      "condition_zh": "充分",
+      "question": "白适野在哪个博物馆策划年度特展？",
+      "evidence": "白适野在九如博物馆担纲策划年度特展；在珮岚博物馆提供展品借展支持。",
+      "gold_answer": "九如博物馆",
+      "core_gold": "九如",
+      "other_answer": "珮岚博物馆",
+      "core_other": "珮岚",
+      "answer_raw": "九如博物馆",
+      "eval": {
+        "answer_span": "九如博物馆",
+        "behavior": "names_gold",
+        "behavior_note": "仅含金标机构核心词",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G30_insu",
+      "group_id": "G30",
+      "domain": "博物馆",
+      "condition": "insufficient",
+      "condition_zh": "不足",
+      "question": "白适野在哪个博物馆策划年度特展？",
+      "evidence": "白适野在九如博物馆提供展品借展支持；在珮岚博物馆提供展品借展支持。",
+      "gold_answer": "九如博物馆",
+      "core_gold": "九如",
+      "other_answer": "珮岚博物馆",
+      "core_other": "珮岚",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": true
+      }
+    },
+    {
+      "item_id": "G30_conf",
+      "group_id": "G30",
+      "domain": "博物馆",
+      "condition": "conflicting",
+      "condition_zh": "冲突",
+      "question": "白适野在哪个博物馆策划年度特展？",
+      "evidence": "白适野在九如博物馆担纲策划年度特展；其担纲策划年度特展的博物馆实为珮岚博物馆。",
+      "gold_answer": "九如博物馆",
+      "core_gold": "九如",
+      "other_answer": "珮岚博物馆",
+      "core_other": "珮岚",
+      "answer_raw": "无法确定",
+      "eval": {
+        "answer_span": "无法确定",
+        "behavior": "says_uncertain",
+        "behavior_note": "命中不确定性表述",
+        "appropriate": false
+      }
+    }
+  ]
+}
