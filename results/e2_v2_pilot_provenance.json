@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-11-19T06:53:56.458273+00:00",
+  "authorization": "User: 开始吧 (2026-11-19)",
+  "scope": "23-group paired behavior pilot, no training or hidden-state extraction",
+  "protected_sha256": {
+    "data/behavior_conditions_v1.json": "0efc24d52d8683a69a2df243f5f460268bf7ad64054b4e5b02e8248f5a558fde",
+    "data/e1_groups_raw.json": "cfa620d75870dbfb4e27d622a2adc446207a3d5ba55927393cafa036600958fb",
+    "data/e1_samples_v1.json": "b7c67052953481fbae63edf4b3cbaee703303c5b336a68f52d3328748f815ed9",
+    "data/e2_conflict_v2.json": "6bb7f0df0cd0e7eb60d3a7909e61cf8c6ff9468734836d27f514e3eef34cbc4a",
+    "data/e2_craft_input.json": "801717eb27b136d22b520fb177b66edb93f7992aee3b32a51667ea97190472cf",
+    "data/e2_crafted.json": "dcc322f5176029a093a845f8bf5b2a0f894f62eea9a834a245f5d060f24fa0fb",
+    "data/e2_samples_v1.json": "e414ba1d4c696a3e38cc84f57d685c552fd2afdce0fdf56bb5212106c823827c",
+    "notes/e2_v2_behavior_retest_plan.md": "c576626b0df23096d9796e74b289e6b443c042504494d01c00dafc01f3a39c0d",
+    "results/e1_report.md": "1cfcc8746f1518803e7aa00dc968a63683d65d8cb9ab412f9baf6fe34764545d",
+    "results/e1_responses.json": "8caf5161b49d17a9b664351c25766e98e1b225afcfc8181a454f1373f09fdc36",
+    "results/e1_rows.csv": "4f9763a0d3805c911df16c92e8cec13f24ecf4aed1751e2da6e6aadfe9e38551",
+    "results/e1_scored.json": "efa8b878a85b3e7e0d08703be8cb1e9082f9a4d1e05241e336beb5e3c0e84568",
+    "results/e1_smoke.json": "f58fe54fc90c26f88d47d299690e83b30bb49199e831c1b5250bac522266be9e",
+    "results/e21_conflict_adjudication.md": "d11b86102c4d578a5e82580673950976c5c31e99ed521302910c213d8f879584",
+    "results/e2_report.md": "d3132733f0d195ef7531102f377686decf403aacd35e6405bb96ce4fc7f6d639",
+    "results/e2_responses.json": "69227d4c331e3b057849d4b203953ac391bda69639f5ab09fe65e55372cd8ce9",
+    "results/e2_rows.csv": "a468ec7596eaf9c79925cf7870fc3d43932fecdd3579366bde8c411571b0922c",
+    "results/e2_scored.json": "5e257f2ab0c4721b26e96ae689f8da4cb13cd1e33ae4f33c929dc67d31b20cbc",
+    "results/e2_smoke.json": "149634fb6d861d5b88d580b8c1d0e5e7b9a838a03750f42dc53a0f91a2d3672c",
+    "results/environment.json": "1fd0a8dfdf096fa9a4ca3a24e4a05b4f8add1ac16f0b308edfb3f28ff3826595",
+    "results/hidden_states_sufficiency.json": "bbcfdea87fae2e4bd9337f1337a7b1949613daebe275bbb083c2b4fcb4a67a3d",
+    "results/qwen3_smoke.json": "a1edb54615d9cb2b181e8eae8231d6fa780307aa821fd91800e264d3d19f07fb"
+  },
+  "source_sha256": {
+    "data/e2_samples_v1.json": "e414ba1d4c696a3e38cc84f57d685c552fd2afdce0fdf56bb5212106c823827c",
+    "data/e2_conflict_v2.json": "6bb7f0df0cd0e7eb60d3a7909e61cf8c6ff9468734836d27f514e3eef34cbc4a",
+    "results/e21_conflict_adjudication.md": "d11b86102c4d578a5e82580673950976c5c31e99ed521302910c213d8f879584",
+    "notes/e2_v2_behavior_retest_plan.md": "c576626b0df23096d9796e74b289e6b443c042504494d01c00dafc01f3a39c0d"
+  },
+  "dataset_sha256": "3d11b9955b83d461706c1344f7a4db3e0d1ac49d9f0bc6b1a0e9f03b7d673ce8"
+}
